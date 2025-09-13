@@ -28,7 +28,7 @@ export async function GET(request) {
       totalEarnings: Math.round(
         orders.reduce((acc, order) => acc + order.total, 0)
       ),
-      totalproducts: products.length,
+      totalProducts: products.length,
     };
 
     return NextResponse.json({

@@ -8,8 +8,14 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const { userId } = getAuth(request);
+    console.log(userId);
+
+    if (!userId) {
+      return NextResponse.json({ error: "Not authenticated" }, { status: 401 });
+    }
 
     const storeId = await authSeller(userId);
+    console.log(storeId);
 
     if (!storeId) {
       return NextResponse.json(
@@ -55,7 +61,7 @@ export async function POST(request) {
 
         const response = await imagekit.upload({
           file: buffer,
-          fileName: image.fileName,
+          fileName: image.fileName || "product-image",
           folder: "product",
         });
 
