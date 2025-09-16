@@ -14,7 +14,7 @@ A full-stack **Multi-Vendor E-commerce** application built with **Next.js** wher
 
 | Home Page | Store Page | Product Page | Admin Dashboard |
 |---|---|---|---|
-| ![Home](./screenshots/home.png) | ![Store](./screenshots/store.png) | ![Product](./screenshots/product.png) | ![Admin](./screenshots/admin.png) |
+| ![Home](./Screenshot%202025-09-16%20142726.png) | ![Store](./screenshots/store.png) | ![Product](./screenshots/product.png) | ![Admin](./screenshots/admin.png) |
 
 ---
 
