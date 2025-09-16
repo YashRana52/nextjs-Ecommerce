@@ -4,11 +4,9 @@ A full-stack **Multi-Vendor E-commerce** application built with **Next.js** wher
 
 ---
 
-
 ## 🚀 Live Demo
 
 🔗 [View Live](https://nextjs-ecommerce-brown-beta.vercel.app/)
-
 
 ---
 
@@ -64,8 +62,8 @@ A full-stack **Multi-Vendor E-commerce** application built with **Next.js** wher
 - Axios / fetch for API calls  
 - React Query or SWR (optional caching)  
 
-### Backend
-- Next.js API Routes / Express (if separate)  
+### Backend (inside Next.js API Routes)
+- Next.js API Routes  
 - PostgreSQL (Neon) + Prisma  
 - Inngest (background jobs & scheduling)  
 - Stripe (Payments & Subscriptions)  
@@ -85,37 +83,35 @@ A full-stack **Multi-Vendor E-commerce** application built with **Next.js** wher
 
 ```bash
 multi-vendor-ecom/
-├── frontend/                 # Next.js app (can be root if monorepo)
-│   ├── app/
-│   ├── components/
-│   ├── lib/
-│   └── public/
-├── backend/                  # optional: if using separate server
-│   ├── controllers/
-│   ├── routes/
-│   ├── jobs/                 # inngest functions / jobs
-│   └── server.js
-├── prisma/                   # prisma schema & migrations
-├── screenshots/
+├── app/              # Next.js app router pages
+├── components/       # Reusable components
+├── lib/              # Utils, helpers, api clients
+├── prisma/           # prisma schema & migrations
+├── public/           # static assets
+├── screenshots/      # images for README
 ├── README.md
-└── .env.example
+└── .env.local
+
 
 ```
 
 ---
 
-
 ## 🧰 Local Setup Instructions
 
-- PostgreSQL (Neon recommended)
--Clerk keys
--Stripe keys
--ImageKit keys
--Inngest keys
--Vercel account
+### ✅ Requirements
+- PostgreSQL (Neon recommended)  
+- Clerk keys  
+- Stripe keys  
+- ImageKit keys  
+- Inngest keys  
+- Vercel account  
 
 ---
 
+### 1️⃣ Clone & Install
+
+```bash
 git clone https://github.com/YashRana52/your-repo.git
 cd multi-vendor-ecom
 cd frontend
@@ -125,13 +121,25 @@ cd ../backend
 npm install
 
 
+
+
 Create a `.env` file in `/frontend`:
+
+# backend .env
+DATABASE_URL=postgresql://user:password@neon-host/dbname
+CLERK_SECRET_KEY=sk_...
+STRIPE_SECRET_KEY=sk_test_...
+IMAGEKIT_PRIVATE_KEY=...
+INNGEST_API_KEY=...
+
 
 ```env
 NEXT_PUBLIC_BACKEND_URL=http://localhost:3000/api
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 NEXT_PUBLIC_IMAGEKIT_ID=your_imagekit_id
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+
+
 
 ```
 
@@ -142,7 +150,7 @@ Start the frontend:`http://localhost:5173`
 
 **Yash Rana**  
 🎓 IET Lucknow  
-📧 yashrana2200520100072@gmail.com  
+📧 yashrana097@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/yashrana52)  
 💻 [GitHub](https://github.com/YashRana52)
 
