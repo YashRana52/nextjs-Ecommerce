@@ -22,9 +22,9 @@ A full-stack **Multi-Vendor E-commerce** application built with **Next.js** wher
 
 
 
-| Cart Page | Store Page |  Admin Dashboard |
-|---|---|---|
-| ![Home](./Screenshot%202025-09-16%20143054.png) | ![Store](./Screenshot%202025-09-16%20143007.png) |  ![Admin](./Screenshot%202025-09-16%20142850.png) |
+| Cart Page |Subscription| 
+|---|---|
+| ![Cart](./Screenshot%202025-09-16%20143054.png) | ![Subscription](./Screenshot%202025-09-16%20145306.png) | 
 
 ---
 
